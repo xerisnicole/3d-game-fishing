@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://2ww8a6vd10kn"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_ewqm0"]
+[ext_resource type="PackedScene" uid="uid://cetuteit4sbk" path="res://scenes/Fish/EastSea/mandarinfish.tscn" id="1_pd5bp"]
+
+[resource]
+script = ExtResource("1_ewqm0")
+fish_name = "Mandarin Fish"
+fish_scene = ExtResource("1_pd5bp")
+available_locations = 8
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

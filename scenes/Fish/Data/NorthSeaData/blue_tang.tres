@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://c1xqhgdagjke1"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_bb30w"]
+[ext_resource type="PackedScene" uid="uid://bio5eg8sykg8v" path="res://scenes/Fish/NorthSea/blue_tang.tscn" id="1_su6v6"]
+
+[resource]
+script = ExtResource("1_bb30w")
+fish_name = "Blue Tang"
+rarity = 1
+fish_scene = ExtResource("1_su6v6")
+available_locations = 2
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

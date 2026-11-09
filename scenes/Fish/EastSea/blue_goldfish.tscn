@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cmm3a34vafy56"]
+
+[ext_resource type="PackedScene" uid="uid://dqfllv5w3bvm0" path="res://assets/FishModels/EastSea/BlueGoldfish.glb" id="1_i8w8d"]
+
+[node name="BlueGoldfish" unique_id=643789188 instance=ExtResource("1_i8w8d")]
+transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 0, 0, 0)
+
+[node name="Cube_025_Cube_018" parent="." index="1" unique_id=689554079]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)

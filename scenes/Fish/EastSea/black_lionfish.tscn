@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bvmdlypm0cbtv"]
+
+[ext_resource type="PackedScene" uid="uid://cvhjnjff01byu" path="res://assets/FishModels/EastSea/BlackLionfish.glb" id="1_0h5r4"]
+
+[node name="BlackLionfish" unique_id=1851487592 instance=ExtResource("1_0h5r4")]
+
+[node name="BlackLionFish_Icosphere_019" parent="." index="0" unique_id=425464923]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, 0, 0, 0)

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cvemuooak3aac"]
+
+[ext_resource type="Script" uid="uid://dptow25it40ar" path="res://scripts/inventory.gd" id="1_qw0r6"]
+[ext_resource type="FontFile" uid="uid://cu6xhkqj40w85" path="res://assets/font/Yellow Banana.otf" id="2_53g1v"]
+[ext_resource type="PackedScene" uid="uid://16biy7816uq0" path="res://scenes/inventory_item.tscn" id="2_hj2ta"]
+[ext_resource type="AudioStream" uid="uid://csasgdkcif538" path="res://assets/soundfx/bag_zipper.mp3" id="2_yyk2a"]
+[ext_resource type="FontFile" uid="uid://dheddxg1rjck3" path="res://assets/font/Super Waffles.ttf" id="3_ty45s"]
+
+[node name="Inventory" type="Panel" unique_id=1406583890]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -250.0
+offset_right = 420.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qw0r6")
+
+[node name="InventorySFX" type="AudioStreamPlayer" parent="." unique_id=1452980734]
+stream = ExtResource("2_yyk2a")
+volume_db = -10.0
+bus = &"SoundFX"
+
+[node name="InventoryTitle" type="Label" parent="." unique_id=1232259152]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.5
+offset_top = 28.0
+offset_right = 74.5
+offset_bottom = 81.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_53g1v")
+theme_override_font_sizes/font_size = 32
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryScroll" type="ScrollContainer" parent="." unique_id=173050045]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="InventoryGrid" type="GridContainer" parent="InventoryScroll" unique_id=1021872336]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 6
+
+[node name="FishingRodItem" parent="InventoryScroll/InventoryGrid" unique_id=1003498778 instance=ExtResource("2_hj2ta")]
+layout_mode = 2
+
+[node name="EquipButton" type="Button" parent="." unique_id=1761143480]
+visible = false
+layout_mode = 0
+offset_left = 157.0
+offset_top = 140.0
+offset_right = 235.0
+offset_bottom = 175.0
+text = "[ Equip ]"
+
+[node name="CloseButton" type="Button" parent="." unique_id=1403813644]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 820.0
+offset_top = -21.0
+offset_right = 880.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.7127155, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ty45s")
+theme_override_font_sizes/font_size = 32
+text = "X"
+
+[node name="ItemHoverLabel" type="Label" parent="." unique_id=380932673]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Item Name"

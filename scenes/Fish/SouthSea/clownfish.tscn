@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://6jwfm130tcwo"]
+
+[ext_resource type="PackedScene" uid="uid://dd03vubbxh7jq" path="res://assets/FishModels/SouthSea/Clownfish.glb" id="1_d76fy"]
+
+[node name="Clownfish" unique_id=1509733485 instance=ExtResource("1_d76fy")]
+
+[node name="Clownfish_Cube_029" parent="." index="0" unique_id=651093973]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.20953178, 0, 0)

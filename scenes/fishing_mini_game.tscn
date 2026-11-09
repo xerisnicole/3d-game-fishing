@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://ccygiya5vcjnm"]
+
+[ext_resource type="Script" uid="uid://bos3ted5eo1cd" path="res://scripts/fishing_mini_game.gd" id="1_vo17g"]
+[ext_resource type="AudioStream" uid="uid://c7dfdfb1xc88c" path="res://assets/soundfx/pop.mp3" id="2_1l4pg"]
+[ext_resource type="AudioStream" uid="uid://se7xckc5rq2n" path="res://assets/soundfx/swipe.mp3" id="3_54527"]
+[ext_resource type="AudioStream" uid="uid://camhws8uhqvly" path="res://assets/soundfx/ding.mp3" id="4_nne0o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nne0o"]
+bg_color = Color(0.9137255, 0.8352941, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wy8j"]
+bg_color = Color(0.70980394, 0.48235294, 0.92156863, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhfw6"]
+bg_color = Color(0.95686275, 0.56078434, 0.69411767, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8980392, 0.8980392, 0.8980392, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_152kg"]
+bg_color = Color(0.8509804, 0.30980393, 0.5137255, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1epgm"]
+bg_color = Color(0.9254902, 0.41960785, 0.6039216, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_163hm"]
+bg_color = Color(1, 0.9411765, 0.65882355, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8980392, 0.8980392, 0.8980392, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpe5d"]
+bg_color = Color(0.9490196, 0.7882353, 0.29803923, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfigr"]
+bg_color = Color(1, 0.8784314, 0.47058824, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="FishingMiniGame" type="Control" unique_id=1044757261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vo17g")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1712924447]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.13333334)
+
+[node name="CatchMeter" type="ProgressBar" parent="." unique_id=1658252682]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -103.0
+offset_top = 30.0
+offset_right = -29.0
+offset_bottom = 213.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.8089983, 0.8089983, 0.8089982, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+theme_override_styles/background = SubResource("StyleBoxFlat_nne0o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6wy8j")
+fill_mode = 3
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1759319569]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.5
+offset_top = 20.0
+offset_right = 78.5
+offset_bottom = 65.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.67030877, 0.054199122, 8.663535e-07, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "10.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TargetArea" type="Control" parent="." unique_id=263793611]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -250.0
+offset_right = 450.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ClickTarget" type="Button" parent="TargetArea" unique_id=639336403]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 250.0
+offset_right = 450.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_xhfw6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_152kg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1epgm")
+text = "CLICK!"
+
+[node name="SliderTrack" type="ColorRect" parent="TargetArea" unique_id=1184424143]
+visible = false
+layout_mode = 0
+offset_left = 100.0
+offset_top = 300.0
+offset_right = 500.0
+offset_bottom = 312.0
+mouse_filter = 2
+color = Color(0.8235294, 0.8862745, 1, 1)
+
+[node name="SliderTarget" type="Button" parent="TargetArea" unique_id=596181179]
+visible = false
+layout_mode = 0
+offset_left = 100.0
+offset_top = 256.0
+offset_right = 200.0
+offset_bottom = 356.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_163hm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vpe5d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jfigr")
+text = "HOLD & SLIDE"
+autowrap_mode = 2
+
+[node name="PopSound" type="AudioStreamPlayer" parent="." unique_id=1370688649]
+stream = ExtResource("2_1l4pg")
+bus = &"SoundFX"
+
+[node name="SliderSwipeSound" type="AudioStreamPlayer" parent="." unique_id=423759601]
+stream = ExtResource("3_54527")
+volume_db = -12.0
+bus = &"SoundFX"
+
+[node name="SuccessDingSound" type="AudioStreamPlayer" parent="." unique_id=1101670768]
+stream = ExtResource("4_nne0o")
+volume_db = -10.0
+bus = &"SoundFX"

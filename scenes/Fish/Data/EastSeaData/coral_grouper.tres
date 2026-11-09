@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://bgm4fway3ktpj"]
+
+[ext_resource type="PackedScene" uid="uid://b3plxtltoqy03" path="res://scenes/Fish/EastSea/coral_grouper.tscn" id="1_jccqd"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_ojvk1"]
+
+[resource]
+script = ExtResource("1_ojvk1")
+fish_name = "Coral Grouper"
+fish_scene = ExtResource("1_jccqd")
+available_locations = 8
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

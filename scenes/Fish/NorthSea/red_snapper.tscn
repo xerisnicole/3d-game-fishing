@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c1p0aoe4lcqj4"]
+
+[ext_resource type="PackedScene" uid="uid://dhe3ucqmpqvus" path="res://assets/FishModels/NorthSea/RedSnapper.glb" id="1_klf74"]
+
+[node name="RedSnapper" unique_id=722791530 instance=ExtResource("1_klf74")]
+
+[node name="RedSnapper_Cube_101" parent="." index="0" unique_id=1904203870]
+transform = Transform3D(-2.1855694e-08, -0.5, 2.1855694e-08, 0, -2.1855694e-08, -0.5, 0.5, -2.1855694e-08, 9.553427e-16, 0, 0, 0)

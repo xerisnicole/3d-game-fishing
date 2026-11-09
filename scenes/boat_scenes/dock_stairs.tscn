@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://k0lkyje6gd2v"]
+
+[ext_resource type="PackedScene" uid="uid://d1b1duuqwhln5" path="res://assets/models/boat_decks/dock_stairs.glb" id="1_qlrds"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kth27"]
+size = Vector3(7.3374634, 9.808075, 0.91467285)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3kpib"]
+height = 7.550537
+radius = 0.5605469
+
+[node name="dock_stairs" unique_id=1525904231 instance=ExtResource("1_qlrds")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Dock_Stairs_Cylinder_005" parent_id_path=PackedInt32Array(965857149) index="0" unique_id=2058305302]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dock_Stairs_Cylinder_005/StaticBody3D" index="0" unique_id=1641757033]
+transform = Transform3D(1, 0, 0, 0, 0.9225095, -0.38597438, 0, 0.38597438, 0.9225095, 0.16537476, 0.048613444, -3.132118)
+shape = SubResource("BoxShape3D_kth27")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Dock_Stairs_Cylinder_005/StaticBody3D" index="1" unique_id=1860112025]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.9928617, -3.7995791, -3.4195557)
+shape = SubResource("CylinderShape3D_3kpib")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Dock_Stairs_Cylinder_005/StaticBody3D" index="2" unique_id=1499812360]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.717012, -3.893215, -3.4195557)
+shape = SubResource("CylinderShape3D_3kpib")

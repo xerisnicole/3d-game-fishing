@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dic8c7ntxumpw"]
+
+[ext_resource type="PackedScene" uid="uid://ccvkyv0h04a6l" path="res://assets/forestmodels/fire_pot.glb" id="1_bvcai"]
+
+[node name="fire_pot" unique_id=1138137290 instance=ExtResource("1_bvcai")]

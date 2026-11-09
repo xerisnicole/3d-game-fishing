@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://7c5uk6do7thg"]
+
+[ext_resource type="PackedScene" uid="uid://dkrng4qhuhnmw" path="res://assets/FishModels/EastSea/ZebraClownFish.glb" id="1_jxl5x"]
+
+[node name="ZebraClownFish" unique_id=862237065 instance=ExtResource("1_jxl5x")]
+
+[node name="ZebraClownfish_Cube_136" parent="." index="0" unique_id=765237262]
+transform = Transform3D(-1.7484556e-08, -0.4, 1.7484556e-08, 0, -1.7484556e-08, -0.4, 0.4, -1.7484556e-08, 7.642742e-16, 0, 0, 0)

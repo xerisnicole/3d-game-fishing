@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c2nirxt10vesg"]
+
+[ext_resource type="PackedScene" uid="uid://cqvfc7htp0hsr" path="res://assets/FishModels/EastSea/MoorishIdol.glb" id="1_h4cer"]
+
+[node name="MoorishIdol" unique_id=1210453206 instance=ExtResource("1_h4cer")]
+
+[node name="MoorishIdol_Cube_052" parent="." index="0" unique_id=622259413]
+transform = Transform3D(-2.1855694e-08, -0.5, 2.1855694e-08, 0, -2.1855694e-08, -0.5, 0.5, -2.1855694e-08, 9.553427e-16, 0, 0, 0)

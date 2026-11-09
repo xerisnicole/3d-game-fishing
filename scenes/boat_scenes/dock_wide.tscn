@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ce4dxs8jiu30v"]
+
+[ext_resource type="PackedScene" uid="uid://bd05bdj1lppq7" path="res://assets/models/boat_decks/dock_wide.glb" id="1_s848x"]
+[ext_resource type="PackedScene" uid="uid://k0lkyje6gd2v" path="res://scenes/boat_scenes/dock_stairs.tscn" id="2_b8wki"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qlrds"]
+size = Vector3(13.270996, 21.598438, 1.3324585)
+
+[node name="dock_wide" unique_id=1821260076 instance=ExtResource("1_s848x")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Dock_Wide_Cylinder_004" parent_id_path=PackedInt32Array(474228571) index="0" unique_id=1681793831]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dock_Wide_Cylinder_004/StaticBody3D" index="0" unique_id=751378350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09301758, -0.07904625, -3.1423335)
+shape = SubResource("BoxShape3D_qlrds")
+
+[node name="dock_stairs" parent="." index="1" unique_id=1525904231 instance=ExtResource("2_b8wki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6190374, 14.987475)

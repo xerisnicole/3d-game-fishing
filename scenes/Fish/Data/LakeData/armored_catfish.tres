@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://xg5vmgxraunc"]
+
+[ext_resource type="PackedScene" uid="uid://dlco1vso3a33s" path="res://scenes/Fish/Lake/armored_catfish.tscn" id="1_e265r"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_ju0g8"]
+
+[resource]
+script = ExtResource("1_ju0g8")
+fish_name = "Armored Catfish"
+rarity = 3
+fish_scene = ExtResource("1_e265r")
+available_locations = 1
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

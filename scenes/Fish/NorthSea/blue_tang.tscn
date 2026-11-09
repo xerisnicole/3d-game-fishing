@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bio5eg8sykg8v"]
+
+[ext_resource type="PackedScene" uid="uid://8w77r7yfj37s" path="res://assets/FishModels/NorthSea/BlueTang.glb" id="1_d84li"]
+
+[node name="BlueTang" unique_id=157110402 instance=ExtResource("1_d84li")]
+
+[node name="BlueTang_Cube_041" parent="." index="0" unique_id=1154398024]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, 0, 0, 0)

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://dnmvc6ciodruo"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_5dfft"]
+[ext_resource type="PackedScene" uid="uid://033q71im0a0p" path="res://scenes/Fish/SouthSea/butterflyfish.tscn" id="1_rs8px"]
+
+[resource]
+script = ExtResource("1_5dfft")
+fish_name = "Butterfly Fish"
+rarity = 1
+fish_scene = ExtResource("1_rs8px")
+available_locations = 4
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

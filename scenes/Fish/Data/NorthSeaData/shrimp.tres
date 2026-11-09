@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://bfj165f2ws6xh"]
+
+[ext_resource type="PackedScene" uid="uid://dg88lw4i0l2pp" path="res://scenes/Fish/NorthSea/shrimp.tscn" id="1_dtpna"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="2_3e20f"]
+
+[resource]
+script = ExtResource("2_3e20f")
+fish_name = "Shrimp"
+rarity = 2
+fish_scene = ExtResource("1_dtpna")
+available_locations = 2
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

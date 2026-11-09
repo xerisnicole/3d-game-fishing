@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://c3htbcch5f688"]
+
+[ext_resource type="PackedScene" uid="uid://7c5uk6do7thg" path="res://scenes/Fish/EastSea/zebra_clown_fish.tscn" id="1_1uvmt"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_gr1vf"]
+
+[resource]
+script = ExtResource("1_gr1vf")
+fish_name = "Zebra Clown Fish"
+rarity = 4
+fish_scene = ExtResource("1_1uvmt")
+available_locations = 8
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

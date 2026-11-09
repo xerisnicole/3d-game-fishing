@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://16biy7816uq0"]
+
+[ext_resource type="Script" uid="uid://cwb4ms0m4bhj8" path="res://scripts/inventory_item.gd" id="1_u4rwp"]
+
+[node name="InventoryItem" type="Button" unique_id=1003498778]
+custom_minimum_size = Vector2(120, 120)
+offset_left = 1.0
+offset_right = 121.0
+offset_bottom = 120.0
+script = ExtResource("1_u4rwp")
+
+[node name="QuantityLabel" type="Label" parent="." unique_id=1482107948]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "x1"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=177911496]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1362113591]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(120, 120)
+render_target_update_mode = 4
+
+[node name="PreviewCamera" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1438565425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099411964)
+current = true
+
+[node name="PreviewLight" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1927970753]
+transform = Transform3D(0.81915206, 0.32898995, -0.46984634, 0, 0.81915206, 0.57357645, 0.57357645, -0.46984634, 0.6710101, 0, 0, 0)
+
+[node name="PreviewModel" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1331189031]
+
+[node name="EquippedLabel" type="Label" parent="." unique_id=290790013]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -11.5
+offset_right = 39.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "EQUIPPED"

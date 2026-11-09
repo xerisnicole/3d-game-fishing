@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ge6tbuonsfob"]
+
+[ext_resource type="PackedScene" uid="uid://b0p4kygf04nmn" path="res://assets/FishModels/NorthSea/SeaUrchin.glb" id="1_iiso0"]
+
+[node name="SeaUrchin2" unique_id=2036008416 instance=ExtResource("1_iiso0")]

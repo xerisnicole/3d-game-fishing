@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c4dxqceqynp2i"]
+
+[ext_resource type="PackedScene" uid="uid://dccpfptfgkjap" path="res://assets/FishModels/EastSea/Sunfish.glb" id="1_gfgra"]
+
+[node name="Sunfish" unique_id=628274786 instance=ExtResource("1_gfgra")]
+
+[node name="Sunfish_Icosphere_024" parent="." index="0" unique_id=44590143]
+transform = Transform3D(-1.7484556e-08, -0.4, 1.7484556e-08, 0, -1.7484556e-08, -0.4, 0.4, -1.7484556e-08, 7.642742e-16, 0, 0, 0)

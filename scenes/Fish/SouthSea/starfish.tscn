@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d4d3q6qivcvjf"]
+
+[ext_resource type="PackedScene" uid="uid://m3ryse4bnci1" path="res://assets/FishModels/SouthSea/Starfish.glb" id="1_mysn6"]
+
+[node name="Starfish2" unique_id=577938689 instance=ExtResource("1_mysn6")]
+
+[node name="Starfish" parent="Starfish_Rig/Skeleton3D" parent_id_path=PackedInt32Array(2005742389) index="0" unique_id=1271717001]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)

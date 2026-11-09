@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cn5q6ewdfj1jy"]
+
+[ext_resource type="PackedScene" uid="uid://bweeqn2hm7cud" path="res://assets/FishModels/Lake/Flowerhorn.glb" id="1_kj6yk"]
+
+[node name="Flowerhorn" unique_id=1767758117 instance=ExtResource("1_kj6yk")]
+
+[node name="FlowerHorn_Icosphere_021" parent="." index="0" unique_id=1837573452]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.20953178, 0, 0)

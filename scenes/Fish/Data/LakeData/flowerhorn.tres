@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://bg3e3unpw3k7b"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_3n4xs"]
+[ext_resource type="PackedScene" uid="uid://cn5q6ewdfj1jy" path="res://scenes/Fish/Lake/flowerhorn.tscn" id="1_vw40g"]
+
+[resource]
+script = ExtResource("1_3n4xs")
+fish_name = "Flowerhorn"
+rarity = 2
+fish_scene = ExtResource("1_vw40g")
+available_locations = 1
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

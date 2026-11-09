@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://cjctp82pl0x37"]
+
+[ext_resource type="PackedScene" uid="uid://cllug2bgmxsfw" path="res://scenes/Fish/SouthSea/parrotfish.tscn" id="1_hlrsp"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_wie8n"]
+
+[resource]
+script = ExtResource("1_wie8n")
+fish_name = "Parrotfish"
+rarity = 4
+fish_scene = ExtResource("1_hlrsp")
+available_locations = 4
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c0dcehywxg63e"]
+
+[ext_resource type="PackedScene" uid="uid://41mfml8ogsri" path="res://assets/FishModels/Lake/Goldfish.glb" id="1_i428y"]
+
+[node name="Goldfish" unique_id=825069163 instance=ExtResource("1_i428y")]
+
+[node name="Cube_001_Cube_007" parent="." index="0" unique_id=1763080522]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.3348093, 0, 0)
+
+[node name="Cube_025_Cube_018" parent="." index="1" unique_id=1886380012]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.3348093, 0, -0.052070558)

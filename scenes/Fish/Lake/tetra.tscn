@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ccxec17hb2ouy"]
+
+[ext_resource type="PackedScene" uid="uid://cxgcp6w3qdeho" path="res://assets/FishModels/Lake/Tetra.glb" id="1_kva87"]
+
+[node name="Tetra" unique_id=880562067 instance=ExtResource("1_kva87")]
+
+[node name="Tetra_Cube_126" parent="." index="0" unique_id=210514827]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.24106216, 0, 0)

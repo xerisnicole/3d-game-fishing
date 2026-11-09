@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ddqgq30wcr8br"]
+
+[ext_resource type="PackedScene" uid="uid://cm527uka1w75f" path="res://assets/FishModels/EastSea/YellowTang.glb" id="1_iptg4"]
+
+[node name="YellowTang" unique_id=456902217 instance=ExtResource("1_iptg4")]
+
+[node name="YellowTang_Icosphere_025" parent="." index="0" unique_id=731295667]
+transform = Transform3D(-1.7484556e-08, -0.4, 1.7484556e-08, 0, -1.7484556e-08, -0.4, 0.4, -1.7484556e-08, 7.642742e-16, 0, 0, 0)

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dsjqv7rosqggd"]
+
+[ext_resource type="PackedScene" uid="uid://v5jyljwi5fnn" path="res://assets/FishModels/NorthSea/Octopus.glb" id="1_7t2uv"]
+
+[node name="Octopus2" unique_id=309801621 instance=ExtResource("1_7t2uv")]
+
+[node name="Octopus" parent="Octopus_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1769932033) index="0" unique_id=62194725]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

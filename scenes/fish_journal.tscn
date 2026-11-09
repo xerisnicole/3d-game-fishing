@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://c7nlnc8n0ipi1"]
+
+[ext_resource type="FontFile" uid="uid://dheddxg1rjck3" path="res://assets/font/Super Waffles.ttf" id="1_dberq"]
+[ext_resource type="Script" uid="uid://belrkfqtmfwl5" path="res://scripts/fish_journal.gd" id="1_qsq5t"]
+[ext_resource type="AudioStream" uid="uid://8ahkt36ad3t4" path="res://assets/soundfx/page_flip.mp3" id="3_pllgn"]
+[ext_resource type="AudioStream" uid="uid://d4khonf8yhsts" path="res://assets/soundfx/open_journal.mp3" id="4_vtwa4"]
+
+[node name="FishJournal" type="Control" unique_id=956423995 groups=["fish_journal"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qsq5t")
+
+[node name="Background" type="ColorRect" parent="." unique_id=581657461]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.09803922)
+
+[node name="Panel" type="Panel" parent="Background" unique_id=1610737135]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -275.0
+offset_right = 500.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Background/Panel" unique_id=963694333]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4, 0.25490198, 0.12941177, 0.9764706)
+
+[node name="Title" type="Label" parent="Background/Panel" unique_id=1857661634]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -245.0
+offset_right = 139.0
+offset_bottom = -209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_dberq")
+theme_override_font_sizes/font_size = 32
+text = "Fish Collection Journal"
+
+[node name="CloseButton" type="Button" parent="Background/Panel" unique_id=956286]
+layout_mode = 0
+offset_left = 978.0
+offset_top = -23.0
+offset_right = 1022.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.7330246, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dberq")
+theme_override_font_sizes/font_size = 32
+text = " X "
+
+[node name="Content" type="VBoxContainer" parent="Background/Panel" unique_id=1799353042]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="FishCenterContainer" type="CenterContainer" parent="Background/Panel/Content" unique_id=1667598142]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Page1_Lake" type="VBoxContainer" parent="Background/Panel/Content/FishCenterContainer" unique_id=1746721208]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PageTitle" type="Label" parent="Background/Panel/Content/FishCenterContainer/Page1_Lake" unique_id=345630366]
+visible = false
+layout_mode = 2
+text = "LAKE"
+
+[node name="FishGrid" type="GridContainer" parent="Background/Panel/Content/FishCenterContainer/Page1_Lake" unique_id=1772870080]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="Page2_NorthSea" type="VBoxContainer" parent="Background/Panel/Content/FishCenterContainer" unique_id=1520347138]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PageTitle" type="Label" parent="Background/Panel/Content/FishCenterContainer/Page2_NorthSea" unique_id=770013594]
+visible = false
+layout_mode = 2
+text = "NORTH SEA"
+
+[node name="FishGrid" type="GridContainer" parent="Background/Panel/Content/FishCenterContainer/Page2_NorthSea" unique_id=1074113694]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="Page3_SouthSea" type="VBoxContainer" parent="Background/Panel/Content/FishCenterContainer" unique_id=1775062286]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="PageTitle" type="Label" parent="Background/Panel/Content/FishCenterContainer/Page3_SouthSea" unique_id=1534328221]
+visible = false
+layout_mode = 2
+text = "SOUTH SEA"
+
+[node name="FishGrid" type="GridContainer" parent="Background/Panel/Content/FishCenterContainer/Page3_SouthSea" unique_id=685685140]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="Page4_EastSea" type="VBoxContainer" parent="Background/Panel/Content/FishCenterContainer" unique_id=1166623122]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PageTitle" type="Label" parent="Background/Panel/Content/FishCenterContainer/Page4_EastSea" unique_id=566334708]
+visible = false
+layout_mode = 2
+text = "EAST SEA"
+
+[node name="FishGrid" type="GridContainer" parent="Background/Panel/Content/FishCenterContainer/Page4_EastSea" unique_id=1008116236]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="PreviousPageButton" type="Button" parent="Background/Panel" unique_id=1109515412]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -78.0
+offset_right = -9.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "  ◀  "
+
+[node name="Label" type="Label" parent="Background/Panel/PreviousPageButton" unique_id=1270806293]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -11.5
+offset_right = 10.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Q"
+
+[node name="NextPageButton" type="Button" parent="Background/Panel" unique_id=238832011]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -78.0
+offset_right = 73.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "  ▶  "
+
+[node name="Label" type="Label" parent="Background/Panel/NextPageButton" unique_id=123452919]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "R"
+
+[node name="FlipPageButtonSound" type="AudioStreamPlayer" parent="." unique_id=1877504864]
+stream = ExtResource("3_pllgn")
+bus = &"SoundFX"
+
+[node name="JournalSound" type="AudioStreamPlayer" parent="." unique_id=452564775]
+stream = ExtResource("4_vtwa4")
+bus = &"SoundFX"

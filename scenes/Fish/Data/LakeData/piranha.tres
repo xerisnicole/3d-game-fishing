@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://bru5rtjcj2638"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_2k2ey"]
+[ext_resource type="PackedScene" uid="uid://dnm0siv0w0jkl" path="res://scenes/Fish/Lake/piranha.tscn" id="1_6wcay"]
+
+[resource]
+script = ExtResource("1_2k2ey")
+fish_name = "Piranha"
+rarity = 3
+fish_scene = ExtResource("1_6wcay")
+available_locations = 1
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

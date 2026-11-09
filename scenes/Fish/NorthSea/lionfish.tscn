@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctyuon2jv7ldt"]
+
+[ext_resource type="PackedScene" uid="uid://vmpnkr8vj7jb" path="res://assets/FishModels/NorthSea/Lionfish.glb" id="1_2s0c5"]
+
+[node name="Lionfish" unique_id=545222418 instance=ExtResource("1_2s0c5")]
+
+[node name="Lionfish_Cube_011" parent="." index="0" unique_id=1578394471]
+transform = Transform3D(-1.2239188e-08, -0.28, 1.2239188e-08, 0, -1.2239188e-08, -0.28, 0.28, -1.2239188e-08, 5.3499194e-16, -0.3147211, -0.36159393, 0)

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://5w4n51wkob4b"]
+
+[ext_resource type="PackedScene" uid="uid://48j4a56l6i2c" path="res://assets/FishModels/NorthSea/Crab.glb" id="1_stfr5"]
+
+[node name="Crab2" unique_id=898213571 instance=ExtResource("1_stfr5")]
+
+[node name="Crab" parent="." index="0" unique_id=1254926086]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)

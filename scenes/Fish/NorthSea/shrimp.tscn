@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dg88lw4i0l2pp"]
+
+[ext_resource type="PackedScene" uid="uid://bo1thxcirl5j1" path="res://assets/FishModels/NorthSea/Shrimp.glb" id="1_kpni6"]
+
+[node name="Shrimp2" unique_id=1176981329 instance=ExtResource("1_kpni6")]
+
+[node name="Shrimp" parent="Shrimp_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1022129598) index="0" unique_id=1829888063]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://dv60dnagupd70"]
+
+[ext_resource type="PackedScene" uid="uid://ge6tbuonsfob" path="res://scenes/Fish/NorthSea/sea_urchin.tscn" id="1_gqdwh"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="2_qn0pm"]
+
+[resource]
+script = ExtResource("2_qn0pm")
+fish_name = "Sea Urchin"
+fish_scene = ExtResource("1_gqdwh")
+available_locations = 4
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

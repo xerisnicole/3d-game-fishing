@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dahlmd4cj1adu"]
+
+[ext_resource type="PackedScene" uid="uid://f5eonqeim4ml" path="res://assets/forestmodels/tent.glb" id="1_5mrtv"]
+
+[node name="tent" unique_id=291563192 instance=ExtResource("1_5mrtv")]

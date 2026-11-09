@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bnhssi8mkoo1c"]
+
+[ext_resource type="PackedScene" uid="uid://dm3wlkp8dqnix" path="res://assets/FishModels/SouthSea/Tang.glb" id="1_henqr"]
+
+[node name="Tang" unique_id=1164050458 instance=ExtResource("1_henqr")]
+
+[node name="Tang_Cube_131" parent="." index="0" unique_id=1423702764]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.118430614, 0, 0)

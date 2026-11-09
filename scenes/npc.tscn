@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://vkqxp0asby6u"]
+
+[ext_resource type="PackedScene" uid="uid://bvbpk18lhpuem" path="res://assets/character/free_pack_-_chibi_base_mesh_rigged.glb" id="1_nh2m4"]
+
+[node name="NPC" unique_id=343957934 instance=ExtResource("1_nh2m4")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)

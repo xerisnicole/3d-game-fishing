@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://chmd3cxrioky5"]
+
+[ext_resource type="PackedScene" uid="uid://bgo1yftkfju1w" path="res://assets/FishModels/Lake/Koi.glb" id="1_4m2dk"]
+
+[node name="Koi" unique_id=1857797954 instance=ExtResource("1_4m2dk")]
+
+[node name="Koi_Icosphere_008" parent="." index="0" unique_id=521546995]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.39173365, 0, 0)

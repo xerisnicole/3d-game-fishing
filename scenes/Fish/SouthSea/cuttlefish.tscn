@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cl53obuxi4ooj"]
+
+[ext_resource type="PackedScene" uid="uid://c1jqg8awycdd7" path="res://assets/FishModels/SouthSea/Cuttlefish.glb" id="1_r1fyp"]
+
+[node name="Cuttlefish2" unique_id=252884631 instance=ExtResource("1_r1fyp")]
+
+[node name="Cuttlefish" parent="." index="0" unique_id=363666836]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)

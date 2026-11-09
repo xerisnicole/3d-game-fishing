@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b7qs1h3kqipee"]
+
+[ext_resource type="PackedScene" uid="uid://die6st04xxrxa" path="res://assets/FishModels/EastSea/Tuna.glb" id="1_atn5c"]
+
+[node name="Tuna" unique_id=497300318 instance=ExtResource("1_atn5c")]
+
+[node name="Tuna_Icosphere_031" parent="." index="0" unique_id=1041402302]
+transform = Transform3D(-2.1855694e-08, -0.5, 2.1855694e-08, 0, -2.1855694e-08, -0.5, 0.5, -2.1855694e-08, 9.553427e-16, 0, 0, 0)

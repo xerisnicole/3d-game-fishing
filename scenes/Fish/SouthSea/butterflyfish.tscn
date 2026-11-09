@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://033q71im0a0p"]
+
+[ext_resource type="PackedScene" uid="uid://5s1rrhkad5ia" path="res://assets/FishModels/SouthSea/Butterflyfish.glb" id="1_w0roe"]
+
+[node name="Butterflyfish" unique_id=1138333122 instance=ExtResource("1_w0roe")]
+
+[node name="Butterflyfish_Cube_059" parent="." index="0" unique_id=399701124]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.12754059, 0, 0)

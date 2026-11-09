@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://di3141gk2fjjd"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_8mnui"]
+[ext_resource type="PackedScene" uid="uid://ctyuon2jv7ldt" path="res://scenes/Fish/NorthSea/lionfish.tscn" id="1_ad43u"]
+
+[resource]
+script = ExtResource("1_8mnui")
+fish_name = "Lionfish"
+rarity = 2
+fish_scene = ExtResource("1_ad43u")
+available_locations = 2
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

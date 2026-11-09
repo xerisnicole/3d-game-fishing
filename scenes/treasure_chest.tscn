@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://4007h23y8yu1"]
+
+[ext_resource type="PackedScene" uid="uid://c8keqeglu8ncv" path="res://assets/Chest/chest_game_asset_animated.glb" id="1_75h8e"]
+
+[node name="TreasureChest" unique_id=935471989 instance=ExtResource("1_75h8e")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Armature_4/GLTF_created_0" parent_id_path=PackedInt32Array(754543937) index="0" unique_id=1709654656]
+bones/3/rotation = Quaternion(-2.8268643e-08, 0.76273507, 0.64671123, -3.334021e-08)

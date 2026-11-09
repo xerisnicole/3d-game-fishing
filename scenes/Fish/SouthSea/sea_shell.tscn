@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://crnvc87jtcali"]
+
+[ext_resource type="PackedScene" uid="uid://bhfcj7ufv4o6j" path="res://assets/FishModels/SouthSea/SeaShell.glb" id="1_5niqc"]
+
+[node name="SeaShell2" unique_id=313478166 instance=ExtResource("1_5niqc")]
+
+[node name="SeaShell" parent="." index="0" unique_id=1042085655]
+transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, 0, 0, 0)

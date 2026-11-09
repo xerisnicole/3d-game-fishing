@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dsatm8nuber5a"]
+
+[ext_resource type="Script" uid="uid://gp1ib13jbp78" path="res://scripts/fishing_rod.gd" id="1_1xn5j"]
+[ext_resource type="PackedScene" uid="uid://clye1rhrjts7m" path="res://assets/models/Rods/Fishing_rod1.glb" id="1_g433l"]
+[ext_resource type="PackedScene" uid="uid://c5cwg1yinbsh0" path="res://scenes/bobber.tscn" id="3_binnr"]
+[ext_resource type="AudioStream" uid="uid://crw2wtfpedvr0" path="res://assets/soundfx/fishing_rod_whoosh.mp3" id="4_binnr"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3kpib"]
+top_radius = 0.003
+bottom_radius = 0.003
+
+[sub_resource type="Animation" id="Animation_1xn5j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FishingRodModel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_binnr"]
+resource_name = "cast"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FishingRodModel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.45, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.5235988, 0), Vector3(0, -0.61086524, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.36666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_throw_bobber"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7l55x"]
+_data = {
+&"RESET": SubResource("Animation_1xn5j"),
+&"cast": SubResource("Animation_binnr")
+}
+
+[node name="FishingRod" type="Node3D" unique_id=40216188]
+script = ExtResource("1_1xn5j")
+
+[node name="FishingRodModel" parent="." unique_id=992407485 instance=ExtResource("1_g433l")]
+
+[node name="Bobber" parent="FishingRodModel" unique_id=2137685665 instance=ExtResource("3_binnr")]
+unique_name_in_owner = true
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.22109619, 9.664421e-09, 1.4532561)
+
+[node name="BobberStartMarker" type="Marker3D" parent="FishingRodModel" unique_id=1142387210]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22109619, 9.664421e-09, 1.4532561)
+
+[node name="FishingLineStarterMarker" type="Marker3D" parent="FishingRodModel" unique_id=511880157]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22109619, 9.664421e-09, 1.4532561)
+
+[node name="FishingLine" type="MeshInstance3D" parent="." unique_id=92239205]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.0014471, 4.3774634e-08, -1.0845948)
+mesh = SubResource("CylinderMesh_3kpib")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1639772733]
+libraries/ = SubResource("AnimationLibrary_7l55x")
+
+[node name="CastSound" type="AudioStreamPlayer" parent="." unique_id=472326298]
+stream = ExtResource("4_binnr")
+bus = &"SoundFX"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://buu8vosndjpx4"]
+
+[ext_resource type="PackedScene" uid="uid://cgvtc8ygrc74r" path="res://scenes/Fish/NorthSea/sea_cucumber.tscn" id="1_eyff5"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="2_2dpkh"]
+
+[resource]
+script = ExtResource("2_2dpkh")
+fish_name = "Sea Cucumber"
+fish_scene = ExtResource("1_eyff5")
+available_locations = 4
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

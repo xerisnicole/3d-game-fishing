@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b3plxtltoqy03"]
+
+[ext_resource type="PackedScene" uid="uid://bjywup6gr7hh4" path="res://assets/FishModels/EastSea/CoralGrouper.glb" id="1_5jut6"]
+
+[node name="CoralGrouper" unique_id=1584433863 instance=ExtResource("1_5jut6")]
+
+[node name="CoralGrouper_Icosphere_017" parent="." index="0" unique_id=391622222]
+transform = Transform3D(-2.1855694e-08, -0.5, 2.1855694e-08, 0, -2.1855694e-08, -0.5, 0.5, -2.1855694e-08, 9.553427e-16, 0, 0, 0)

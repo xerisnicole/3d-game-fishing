@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://die4kk873waek"]
+
+[ext_resource type="PackedScene" uid="uid://b8xupeiw6755m" path="res://assets/FishModels/SouthSea/Shell.glb" id="1_ayhjf"]
+
+[node name="Shell" unique_id=1143676437 instance=ExtResource("1_ayhjf")]
+
+[node name="EmptyShell" parent="." index="0" unique_id=1487917762]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)

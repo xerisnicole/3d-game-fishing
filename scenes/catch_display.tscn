@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://wo8lhchxkw1e"]
+
+[ext_resource type="Script" uid="uid://0tp8ha32wn7d" path="res://scripts/catch_display.gd" id="1_e2b5f"]
+[ext_resource type="FontFile" uid="uid://cu6xhkqj40w85" path="res://assets/font/Yellow Banana.otf" id="2_d1qpl"]
+[ext_resource type="AudioStream" uid="uid://dvycwa8e53reu" path="res://assets/soundfx/splash.mp3" id="2_e2b5f"]
+[ext_resource type="Texture2D" uid="uid://qs5hjkbtxr4m" path="res://assets/textures/glow_texture.png" id="2_kdoqg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1qpl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CatchDisplay" type="Control" unique_id=1881687997]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2b5f")
+
+[node name="Panel" type="Panel" parent="." unique_id=1122428524]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -200.0
+offset_right = 210.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d1qpl")
+
+[node name="Content" type="VBoxContainer" parent="Panel" unique_id=8384835]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -140.0
+offset_right = 194.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="AuraLayer" type="Control" parent="Panel/Content" unique_id=1176157101]
+layout_mode = 2
+
+[node name="FishAura" type="TextureRect" parent="Panel/Content/AuraLayer" unique_id=137170715]
+custom_maximum_size = Vector2(600, 600)
+layout_mode = 1
+offset_left = -94.0
+offset_top = -115.5
+offset_right = 506.0
+offset_bottom = 484.5
+texture = ExtResource("2_kdoqg")
+
+[node name="FishPreview" type="SubViewportContainer" parent="Panel/Content" unique_id=311380940]
+custom_minimum_size = Vector2(388, 280)
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="Panel/Content/FishPreview" unique_id=443458965]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(388, 280)
+render_target_update_mode = 4
+
+[node name="FishScene" type="Node3D" parent="Panel/Content/FishPreview/SubViewport" unique_id=330689261]
+
+[node name="FishCamera" type="Camera3D" parent="Panel/Content/FishPreview/SubViewport/FishScene" unique_id=1682552372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.0244856)
+current = true
+far = 100.0
+
+[node name="FishLight" type="DirectionalLight3D" parent="Panel/Content/FishPreview/SubViewport/FishScene" unique_id=581625589]
+transform = Transform3D(0.81915206, 0.32898995, -0.46984634, 0, 0.81915206, 0.57357645, 0.57357645, -0.46984634, 0.6710101, 0, 0, 0)
+
+[node name="FishNameLabel" type="Label" parent="Panel/Content" unique_id=1165457454]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_d1qpl")
+theme_override_font_sizes/font_size = 16
+text = "You caught a fish!"
+
+[node name="FishRarityLabel" type="Label" parent="Panel/Content" unique_id=1327167662]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.2015265, 0.20152661, 0.20152652, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_d1qpl")
+theme_override_font_sizes/font_size = 24
+text = "COMMON"
+
+[node name="CloseInstructionLabel" type="Label" parent="Panel" unique_id=2007137978]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = 189.0
+offset_right = 209.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8388211, 0.19151515, 0.21892038, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_d1qpl")
+theme_override_font_sizes/font_size = 16
+text = "Click left mouse to close"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FishCatchSound" type="AudioStreamPlayer" parent="." unique_id=1185486069]
+process_mode = 3
+stream = ExtResource("2_e2b5f")
+bus = &"SoundFX"

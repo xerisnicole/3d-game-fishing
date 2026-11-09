@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://1ybe36gvyj6u"]
+
+[ext_resource type="PackedScene" uid="uid://die4kk873waek" path="res://scenes/Fish/SouthSea/shell.tscn" id="1_og2af"]
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="2_ewxut"]
+
+[resource]
+script = ExtResource("2_ewxut")
+fish_name = "Shell"
+fish_scene = ExtResource("1_og2af")
+available_locations = 2
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

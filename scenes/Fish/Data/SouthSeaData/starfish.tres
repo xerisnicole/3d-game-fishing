@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://0rlyn7irj2cs"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_7ct2c"]
+[ext_resource type="PackedScene" uid="uid://d4d3q6qivcvjf" path="res://scenes/Fish/SouthSea/starfish.tscn" id="1_d7js4"]
+
+[resource]
+script = ExtResource("1_7ct2c")
+fish_name = "Starfish"
+rarity = 1
+fish_scene = ExtResource("1_d7js4")
+available_locations = 4
+metadata/_custom_type_script = "uid://fk1fbpouuetk"

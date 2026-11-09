@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ce7cw74586p1u"]
+
+[ext_resource type="AudioStream" uid="uid://dhvjc5m33ca2q" path="res://assets/music/softness.mp3" id="1_0rulj"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" unique_id=2037515299]
+process_mode = 3
+stream = ExtResource("1_0rulj")
+bus = &"Music"

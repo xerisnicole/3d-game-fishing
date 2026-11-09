@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cb8i108n5fsql"]
+
+[ext_resource type="AudioStream" uid="uid://dqir8akf13mfb" path="res://assets/soundfx/ambient/water_flow_sound.mp3" id="1_b6upj"]
+
+[node name="water_flow" type="Node3D" unique_id=765823199]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1662928231]
+process_mode = 3
+stream = ExtResource("1_b6upj")
+volume_db = -15.0
+autoplay = true
+bus = &"Ambient"

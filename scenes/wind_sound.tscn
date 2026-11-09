@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dks1t07yybrba"]
+
+[ext_resource type="AudioStream" uid="uid://b0jwi7u1e0nf" path="res://assets/soundfx/ambient/wind_sound.mp3" id="1_85gfy"]
+
+[node name="wind_sound" type="Node3D" unique_id=1962575469]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1172527068]
+process_mode = 3
+stream = ExtResource("1_85gfy")
+autoplay = true
+bus = &"Ambient"
+parameters/looping = false

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://drte05yu665w6"]
+
+[ext_resource type="PackedScene" uid="uid://dlmamqoxmidxa" path="res://assets/FishModels/EastSea/Swordfish.glb" id="1_mhkk0"]
+
+[node name="Swordfish" unique_id=828479400 instance=ExtResource("1_mhkk0")]
+
+[node name="Swordfish_Cube_044" parent="." index="0" unique_id=796847787]
+transform = Transform3D(-2.1855694e-08, -0.5, 2.1855694e-08, 0, -2.1855694e-08, -0.5, 0.5, -2.1855694e-08, 9.553427e-16, 0, 0, 0)

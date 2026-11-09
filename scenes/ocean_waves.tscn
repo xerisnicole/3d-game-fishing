@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dg4p6sk20cp5o"]
+
+[ext_resource type="AudioStream" uid="uid://dx2tjdhti3s27" path="res://assets/soundfx/ambient/ocean_waves.mp3" id="1_2phfx"]
+
+[node name="ocean_waves" type="Node3D" unique_id=1112358493]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=162343042]
+process_mode = 3
+stream = ExtResource("1_2phfx")
+volume_db = -10.0
+autoplay = true
+bus = &"Ambient"

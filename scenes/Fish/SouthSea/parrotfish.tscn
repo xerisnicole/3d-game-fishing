@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cllug2bgmxsfw"]
+
+[ext_resource type="PackedScene" uid="uid://cmqtmlwh725fg" path="res://assets/FishModels/SouthSea/Parrotfish.glb" id="1_k8v7v"]
+
+[node name="Parrotfish" unique_id=1606095633 instance=ExtResource("1_k8v7v")]
+
+[node name="ParrotFish_Icosphere_029" parent="." index="0" unique_id=1988488891]
+transform = Transform3D(-2.1855694e-08, -0.5, 2.1855694e-08, 0, -2.1855694e-08, -0.5, 0.5, -2.1855694e-08, 9.553427e-16, 0, 0, 0)

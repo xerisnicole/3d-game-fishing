@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dnm0siv0w0jkl"]
+
+[ext_resource type="PackedScene" uid="uid://deawbh17jcxv8" path="res://assets/FishModels/Lake/Piranha.glb" id="1_c4ecp"]
+
+[node name="Piranha" unique_id=1286227401 instance=ExtResource("1_c4ecp")]
+
+[node name="Piranha_Cube_040" parent="." index="0" unique_id=399806266]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.17309141, 0, 0)

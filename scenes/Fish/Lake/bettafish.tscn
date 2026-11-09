@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://j5pveq2elid3"]
+
+[ext_resource type="PackedScene" uid="uid://l3rx5larjkb" path="res://assets/FishModels/Lake/Bettafish.glb" id="1_73nji"]
+
+[node name="Bettafish" unique_id=991562128 instance=ExtResource("1_73nji")]
+
+[node name="Betta_Cube_047" parent="." index="0" unique_id=1678969174]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.34703732, 0, 0)

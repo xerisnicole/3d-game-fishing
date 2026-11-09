@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bsx5nwlmuhapm"]
+
+[ext_resource type="PackedScene" uid="uid://clye1rhrjts7m" path="res://assets/models/Rods/Fishing_rod1.glb" id="1_2pr1a"]
+
+[node name="Fishing_rod1" unique_id=992407485 instance=ExtResource("1_2pr1a")]
+
+[node name="Fishing_Rod" parent="." index="0" unique_id=580318851]
+transform = Transform3D(-0.007372368, 0.005162188, -1.3589622e-09, 0.005162188, 0.007372368, 0, 1.1131966e-09, -7.7946866e-10, -0.009, -0.17877674, -0.07365805, 0)

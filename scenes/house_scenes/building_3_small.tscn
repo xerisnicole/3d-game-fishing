@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://eu0aqyyx15kf"]
+
+[ext_resource type="PackedScene" uid="uid://dnjbr00dix3gc" path="res://assets/models/buildings/houses/building3_small.glb" id="1_40m45"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2fo87"]
+size = Vector3(2.8335571, 4.272644, 5.657837)
+
+[node name="building3_small" unique_id=223771754 instance=ExtResource("1_40m45")]
+
+[node name="Building3_Small_Cube_019" parent="." index="0" unique_id=1192627302]
+transform = Transform3D(3.5, 0, 0, 0, -1.5298986e-07, -3.5, 0, 3.5, -1.5298986e-07, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Building3_Small_Cube_019" index="0" unique_id=2053881468]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Building3_Small_Cube_019/StaticBody3D" index="0" unique_id=1097756095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0003357615, 0.054534946, -2.8246472)
+shape = SubResource("BoxShape3D_2fo87")

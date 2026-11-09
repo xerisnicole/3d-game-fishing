@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cvhypq3ff6npk"]
+
+[ext_resource type="PackedScene" uid="uid://ynag5nyv0uyd" path="res://assets/FishModels/NorthSea/Pufferfish.glb" id="1_8lrxo"]
+
+[node name="Pufferfish" unique_id=1957708725 instance=ExtResource("1_8lrxo")]
+
+[node name="Pufferfish_002_Cube_001" parent="." index="0" unique_id=235936945]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.12053108, 0, 0)
+
+[node name="Pufferfish_Cube_002" parent="." index="1" unique_id=339097047]
+transform = Transform3D(-1.5298985e-08, -0.35, 1.5298985e-08, 0, -1.5298985e-08, -0.35, 0.35, -1.5298985e-08, 6.687399e-16, -0.12053108, 0, 0)

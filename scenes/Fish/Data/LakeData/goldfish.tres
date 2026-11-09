@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://c8ik3se6qpiwy"]
+
+[ext_resource type="Script" uid="uid://fk1fbpouuetk" path="res://scripts/fishdata.gd" id="1_cxlmo"]
+[ext_resource type="PackedScene" uid="uid://c0dcehywxg63e" path="res://scenes/Fish/Lake/goldfish.tscn" id="1_frui4"]
+
+[resource]
+script = ExtResource("1_cxlmo")
+fish_name = "Goldfish"
+fish_scene = ExtResource("1_frui4")
+available_locations = 1
+metadata/_custom_type_script = "uid://fk1fbpouuetk"
