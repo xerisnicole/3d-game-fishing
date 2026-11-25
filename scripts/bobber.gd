@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+const SPLASH_VFX_SCENE: PackedScene = preload("res://addons/water_splash_vfx/SCENES/splash_vfx.tscn")
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var splash_sound: AudioStreamPlayer = $SplashSound
 @onready var fish_bite_sound: AudioStreamPlayer = $FishBiteSound
@@ -72,6 +74,7 @@ func _physics_process(delta: float) -> void:
 func _on_water_detector_area_entered(area: Area3D) -> void:
 	if area.is_in_group("water"):
 		splash_sound.play()
+		spawn_splash_vfx()
 		is_in_water = true
 		water_height = global_position.y
 		
@@ -305,3 +308,9 @@ func stop_catch_prompt_blink() -> void:
 
 	catch_prompt_label.hide()
 	catch_prompt_label.modulate.a = 1.0
+
+func spawn_splash_vfx() -> void:
+	var splash_vfx = SPLASH_VFX_SCENE.instantiate() as Node3D
+	splash_vfx.scale = Vector3(0.4, 0.4, 0.4)
+	get_tree().current_scene.add_child(splash_vfx)
+	splash_vfx.global_position = global_position

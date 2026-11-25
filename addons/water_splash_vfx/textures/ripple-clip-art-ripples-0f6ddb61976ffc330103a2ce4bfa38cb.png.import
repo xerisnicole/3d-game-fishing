@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5xjgrld6nbim"
-path.s3tc="res://.godot/imported/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png-51e9e2b67fe338c5946730a143a77408.s3tc.ctex"
+path.s3tc="res://.godot/imported/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png-36c943f81571cfe214e0346e541db0aa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/swimming-in-godot-from-scracth/textures/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png"
-dest_files=["res://.godot/imported/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png-51e9e2b67fe338c5946730a143a77408.s3tc.ctex"]
+source_file="res://addons/water_splash_vfx/textures/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png"
+dest_files=["res://.godot/imported/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png-36c943f81571cfe214e0346e541db0aa.s3tc.ctex"]
 
 [params]
 

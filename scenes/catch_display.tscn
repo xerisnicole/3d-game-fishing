@@ -123,4 +123,5 @@ vertical_alignment = 1
 [node name="FishCatchSound" type="AudioStreamPlayer" parent="." unique_id=1185486069]
 process_mode = 3
 stream = ExtResource("2_e2b5f")
+volume_db = -15.0
 bus = &"SoundFX"

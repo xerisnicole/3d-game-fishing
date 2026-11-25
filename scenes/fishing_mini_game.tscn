@@ -204,6 +204,7 @@ autowrap_mode = 2
 
 [node name="PopSound" type="AudioStreamPlayer" parent="." unique_id=1370688649]
 stream = ExtResource("2_1l4pg")
+volume_db = -25.623
 bus = &"SoundFX"
 
 [node name="SliderSwipeSound" type="AudioStreamPlayer" parent="." unique_id=423759601]

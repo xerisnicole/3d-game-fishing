@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwhn1f8020px2"
-path.s3tc="res://.godot/imported/istockphoto-1768513431-612x612.png-6452c897d7c0798da322fbd77b35a886.s3tc.ctex"
+uid="uid://e0u0uinwwqsx"
+path.s3tc="res://.godot/imported/lighthouse_tower_lighthouse_emmisive.jpg-93cd0f4cd6a26fa4d16ea5415edb4983.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "a61c9f69eca617a2aac1b2d6f595b6a7"
+}
 
 [deps]
 
-source_file="res://addons/swimming-in-godot-from-scracth/textures/istockphoto-1768513431-612x612.png"
-dest_files=["res://.godot/imported/istockphoto-1768513431-612x612.png-6452c897d7c0798da322fbd77b35a886.s3tc.ctex"]
+source_file="res://assets/ownmodels/lighthouse_tower_lighthouse_emmisive.jpg"
+dest_files=["res://.godot/imported/lighthouse_tower_lighthouse_emmisive.jpg-93cd0f4cd6a26fa4d16ea5415edb4983.s3tc.ctex"]
 
 [params]
 

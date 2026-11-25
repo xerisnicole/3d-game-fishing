@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bcos8a14my0rq"]
 
-[ext_resource type="Texture2D" uid="uid://bwhn1f8020px2" path="res://addons/swimming-in-godot-from-scracth/textures/istockphoto-1768513431-612x612.png" id="1_8qwew"]
-[ext_resource type="Script" uid="uid://cbbm8tdn0fun2" path="res://addons/swimming-in-godot-from-scracth/scripts/vfx_controller.gd" id="1_bfypq"]
-[ext_resource type="Shader" uid="uid://bpg1es1n1dleq" path="res://addons/swimming-in-godot-from-scracth/splash shaders/splash_wall.gdshader" id="1_lvqiq"]
-[ext_resource type="Shader" uid="uid://1r4p21obbjps" path="res://addons/swimming-in-godot-from-scracth/splash shaders/ripple_vfx.gdshader" id="3_n2xw1"]
-[ext_resource type="Texture2D" uid="uid://b5xjgrld6nbim" path="res://addons/swimming-in-godot-from-scracth/textures/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png" id="5_dd1bc"]
-[ext_resource type="Shader" uid="uid://byyrvqmk6iibf" path="res://addons/swimming-in-godot-from-scracth/splash shaders/impact.gdshader" id="6_sd5uh"]
-[ext_resource type="Texture2D" uid="uid://7l1uuenn8oey" path="res://addons/swimming-in-godot-from-scracth/textures/Image_ro88pdro88pdro88 (1).png" id="7_yvhla"]
-[ext_resource type="Shader" uid="uid://ct8poi8ho67tg" path="res://addons/swimming-in-godot-from-scracth/splash shaders/pillar_vfx.gdshader" id="8_yvhla"]
+[ext_resource type="Script" uid="uid://cbbm8tdn0fun2" path="res://addons/water_splash_vfx/scripts/vfx_controller.gd" id="1_jhpsl"]
+[ext_resource type="Shader" uid="uid://bpg1es1n1dleq" path="res://addons/water_splash_vfx/splash shaders/splash_wall.gdshader" id="2_hvabq"]
+[ext_resource type="Texture2D" uid="uid://bwhn1f8020px2" path="res://addons/water_splash_vfx/textures/istockphoto-1768513431-612x612.png" id="3_4k0jb"]
+[ext_resource type="Shader" uid="uid://ct8poi8ho67tg" path="res://addons/water_splash_vfx/splash shaders/pillar_vfx.gdshader" id="4_r6xr4"]
+[ext_resource type="Shader" uid="uid://byyrvqmk6iibf" path="res://addons/water_splash_vfx/splash shaders/impact.gdshader" id="5_kflky"]
+[ext_resource type="Texture2D" uid="uid://7l1uuenn8oey" path="res://addons/water_splash_vfx/textures/Image_ro88pdro88pdro88 (1).png" id="6_0dk0h"]
+[ext_resource type="Shader" uid="uid://1r4p21obbjps" path="res://addons/water_splash_vfx/splash shaders/ripple_vfx.gdshader" id="7_jiy04"]
+[ext_resource type="Texture2D" uid="uid://b5xjgrld6nbim" path="res://addons/water_splash_vfx/textures/ripple-clip-art-ripples-0f6ddb61976ffc330103a2ce4bfa38cb.png" id="8_fs0p8"]
 
 [sub_resource type="Gradient" id="Gradient_bfypq"]
 offsets = PackedFloat32Array(0.8180212, 1)
@@ -24,9 +24,9 @@ color_ramp = SubResource("GradientTexture1D_lvqiq")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lvqiq"]
 render_priority = 1
-shader = ExtResource("1_lvqiq")
+shader = ExtResource("2_hvabq")
 shader_parameter/albedo = Color(2.454227, 2.454227, 2.454227, 1)
-shader_parameter/texture_albedo = ExtResource("1_8qwew")
+shader_parameter/texture_albedo = ExtResource("3_4k0jb")
 shader_parameter/albedo_texture_size = Vector2i(612, 511)
 shader_parameter/point_size = 1.0
 shader_parameter/roughness = 1.0
@@ -52,13 +52,13 @@ render_priority = 1
 transparency = 1
 cull_mode = 2
 albedo_color = Color(3.0818713, 3.0818713, 3.0818713, 1)
-albedo_texture = ExtResource("1_8qwew")
+albedo_texture = ExtResource("3_4k0jb")
 uv1_offset = Vector3(0, 0.24, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5cnsp"]
 render_priority = 1
 next_pass = SubResource("StandardMaterial3D_yvhla")
-shader = ExtResource("8_yvhla")
+shader = ExtResource("4_r6xr4")
 shader_parameter/albedo = Vector4(0, 0, 0, 0)
 shader_parameter/scroll_speed = 2.0
 
@@ -71,9 +71,9 @@ cap_bottom = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7rvwp"]
 render_priority = 1
-shader = ExtResource("6_sd5uh")
+shader = ExtResource("5_kflky")
 shader_parameter/albedo = Color(1.1638972, 1.1638972, 1.1638972, 1)
-shader_parameter/texture_albedo = ExtResource("7_yvhla")
+shader_parameter/texture_albedo = ExtResource("6_0dk0h")
 shader_parameter/albedo_texture_size = Vector2i(2880, 1440)
 shader_parameter/point_size = 0.10000000149012
 shader_parameter/roughness = 0.0
@@ -81,13 +81,29 @@ shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
 shader_parameter/specular = 0.0
 shader_parameter/metallic = 0.0
 shader_parameter/uv1_scale = Vector3(-1, -1, -1)
-shader_parameter/uv1_offset = Vector3(0, -0.097777784, 0)
+shader_parameter/uv1_offset = Vector3(0, 0.165, 0)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 
 [sub_resource type="SphereMesh" id="SphereMesh_5cnsp"]
 material = SubResource("ShaderMaterial_7rvwp")
 rings = 16
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t0r1x"]
+direction = Vector3(1, 1, 0)
+spread = 15.0
+initial_velocity_min = 0.59999996
+initial_velocity_max = 1.1999999
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vnml2"]
+transparency = 1
+albedo_color = Color(0.6862745, 0.9372549, 1, 0.62352943)
+
+[sub_resource type="SphereMesh" id="SphereMesh_c88m0"]
+material = SubResource("StandardMaterial3D_vnml2")
+radius = 0.02
+height = 0.04
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dd1bc"]
 particle_flag_align_y = true
@@ -111,11 +127,11 @@ rings = 8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dd1bc"]
 render_priority = 0
-shader = ExtResource("3_n2xw1")
-shader_parameter/ripple_texture = ExtResource("5_dd1bc")
+shader = ExtResource("7_jiy04")
+shader_parameter/ripple_texture = ExtResource("8_fs0p8")
 shader_parameter/color = Color(6.053496, 13.674775, 18.892157, 1)
 shader_parameter/thickness = 0.04200004949499991
-shader_parameter/radius = 0.29434306199032223
+shader_parameter/radius = 0.0
 shader_parameter/feather = 0.13600000646
 
 [sub_resource type="Animation" id="Animation_yvhla"]
@@ -155,6 +171,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-1, -1, -1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("veritcal_pivots/bubbles:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_wh3dl"]
@@ -294,6 +322,18 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector3(-1, -0.916, -1), Vector3(-1, -1, -1), Vector3(-1, -0.48, -1)]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("veritcal_pivots/bubbles:emitting")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sd5uh"]
 _data = {
@@ -302,7 +342,7 @@ _data = {
 }
 
 [node name="controller" type="Node3D" unique_id=467897261 node_paths=PackedStringArray("vfx_layers", "anim_player")]
-script = ExtResource("1_bfypq")
+script = ExtResource("1_jhpsl")
 vfx_layers = [NodePath("water_drops"), NodePath("ripples"), NodePath("veritcal_pivots/bubbles"), NodePath("veritcal_pivots/impact_pivot"), NodePath("veritcal_pivots/pillar_pivot"), NodePath("veritcal_pivots/ender_pivot")]
 anim_player = NodePath("AnimationPlayer")
 
@@ -311,7 +351,6 @@ anim_player = NodePath("AnimationPlayer")
 [node name="ender_pivot" type="Node3D" parent="veritcal_pivots" unique_id=684697115]
 
 [node name="splash_ender" type="GPUParticles3D" parent="veritcal_pivots/ender_pivot" unique_id=2116500088]
-emitting = false
 amount = 1
 fixed_fps = 0
 local_coords = true
@@ -326,10 +365,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9893434, 0)
 mesh = SubResource("CylinderMesh_3q5ds")
 
 [node name="impact_pivot" type="Node3D" parent="veritcal_pivots" unique_id=1059535346]
-transform = Transform3D(2.2232232, 0, 0, 0, 2.7929835, 0, 0, 0, 2.2855754, 0, -1.763125, 0)
+transform = Transform3D(2.2232232, 0, 0, 0, 2.7929835, 0, 0, 0, 2.2855754, 0, -1.285, 0)
 
 [node name="splash_impact" type="MeshInstance3D" parent="veritcal_pivots/impact_pivot" unique_id=1386748994]
-transform = Transform3D(2.1923077, 0, 0, 0, 2, 0, 0, 0, 2.1923077, 0, 1, 0)
+transform = Transform3D(0.1, 0, 0, 0, 2, 0, 0, 0, 0.1, 0, 1, 0)
 mesh = SubResource("SphereMesh_5cnsp")
 
 [node name="splash_impact2" type="MeshInstance3D" parent="veritcal_pivots/impact_pivot/splash_impact" unique_id=44602922]
@@ -338,17 +377,19 @@ visible = false
 mesh = SubResource("SphereMesh_5cnsp")
 
 [node name="bubbles" type="GPUParticles3D" parent="veritcal_pivots" unique_id=136708436]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_t0r1x")
+draw_pass_1 = SubResource("SphereMesh_c88m0")
 
 [node name="water_drops" type="GPUParticles3D" parent="." unique_id=1903690520]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
-emitting = false
 amount = 24
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_dd1bc")
 draw_pass_1 = SubResource("SphereMesh_sd5uh")
 
 [node name="ripples" type="MeshInstance3D" parent="." unique_id=1905870103]
-transform = Transform3D(3.0938773, 0, 0, 0, 3.0938773, 0, 0, 0, 3.0938773, 0, 0.363086, 0)
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.363086, 0)
 mesh = SubResource("PlaneMesh_bfypq")
 surface_material_override/0 = SubResource("ShaderMaterial_dd1bc")
 

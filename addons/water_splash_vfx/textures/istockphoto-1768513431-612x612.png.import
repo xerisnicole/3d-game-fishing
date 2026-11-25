@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7l1uuenn8oey"
-path.s3tc="res://.godot/imported/Image_ro88pdro88pdro88 (1).png-e59a63ec3a0fb8f95c90801514e0530c.s3tc.ctex"
+uid="uid://bwhn1f8020px2"
+path.s3tc="res://.godot/imported/istockphoto-1768513431-612x612.png-823fc171a211e1225c0f1d5ef2a14281.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/swimming-in-godot-from-scracth/textures/Image_ro88pdro88pdro88 (1).png"
-dest_files=["res://.godot/imported/Image_ro88pdro88pdro88 (1).png-e59a63ec3a0fb8f95c90801514e0530c.s3tc.ctex"]
+source_file="res://addons/water_splash_vfx/textures/istockphoto-1768513431-612x612.png"
+dest_files=["res://.godot/imported/istockphoto-1768513431-612x612.png-823fc171a211e1225c0f1d5ef2a14281.s3tc.ctex"]
 
 [params]
 

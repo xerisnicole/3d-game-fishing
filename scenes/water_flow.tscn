@@ -7,6 +7,6 @@
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1662928231]
 process_mode = 3
 stream = ExtResource("1_b6upj")
-volume_db = -15.0
+volume_db = -10.0
 autoplay = true
 bus = &"Ambient"

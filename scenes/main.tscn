@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bdy8fw72s66sp"]
 
+[ext_resource type="Script" uid="uid://cmxelc682lb2n" path="res://scenes/day_night_cycle.gd" id="1_1epgm"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://csf6ef73vko54" path="res://scenes/nature_render.scn" id="2_dnhof"]
 [ext_resource type="PackedScene" uid="uid://4007h23y8yu1" path="res://scenes/treasure_chest.tscn" id="3_o6xl0"]
@@ -23,6 +24,7 @@
 [ext_resource type="Resource" uid="uid://dv60dnagupd70" path="res://scenes/Fish/Data/NorthSeaData/sea_urchin.tres" id="13_2wyq8"]
 [ext_resource type="Resource" uid="uid://bfj165f2ws6xh" path="res://scenes/Fish/Data/NorthSeaData/shrimp.tres" id="14_vxglm"]
 [ext_resource type="Resource" uid="uid://bra5cejjc4lf4" path="res://scenes/Fish/Data/SouthSeaData/cuttefish.tres" id="15_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://ced68gau4s6w" path="res://scenes/lighthouse_tower.tscn" id="16_152kg"]
 [ext_resource type="Resource" uid="uid://dqrm7cxag1eic" path="res://scenes/Fish/Data/SouthSeaData/pearl_shell.tres" id="16_yq6so"]
 [ext_resource type="Resource" uid="uid://xwha7203py28" path="res://scenes/Fish/Data/SouthSeaData/sea_horse.tres" id="17_fv21b"]
 [ext_resource type="Resource" uid="uid://t06kp8vpl67m" path="res://scenes/Fish/Data/SouthSeaData/sea_shell.tres" id="18_tel4y"]
@@ -64,8 +66,14 @@
 [ext_resource type="FontFile" uid="uid://cu6xhkqj40w85" path="res://assets/font/Yellow Banana.otf" id="60_od4ux"]
 [ext_resource type="PackedScene" uid="uid://dks1t07yybrba" path="res://scenes/wind_sound.tscn" id="61_t5ykj"]
 [ext_resource type="PackedScene" uid="uid://dg4p6sk20cp5o" path="res://scenes/ocean_waves.tscn" id="62_e755i"]
+[ext_resource type="PackedScene" uid="uid://btq85360uoop0" path="res://scenes/vfx_fire.tscn" id="65_xhfw6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bar58"]
+sky_top_color = Color(0.3372549, 0.5254902, 0.70980394, 1)
+sky_horizon_color = Color(0.72156864, 0.8039216, 0.8784314, 1)
+ground_bottom_color = Color(0.32156864, 0.3882353, 0.3019608, 1)
+ground_horizon_color = Color(0.627451, 0.6666667, 0.6039216, 1)
+sun_angle_max = 10.0
 
 [sub_resource type="Sky" id="Sky_1022l"]
 sky_material = SubResource("ProceduralSkyMaterial_bar58")
@@ -223,41 +231,6 @@ shader_parameter/border_near = 0.5
 shader_parameter/border_far = 300.0
 shader_parameter/cut_out_x = 0.0
 shader_parameter/cut_out_z = 0.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6xl0"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ids8r"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnhof"]
-albedo_color = Color(0.10203434, 0.45547253, 0.7506966, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tipki"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h626j"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85g3d"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1x1jr"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_choun"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
-albedo_color = Color(0.023529412, 0.22352941, 0.3882353, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nijsm"]
-albedo_color = Color(0.56099004, 0.006061322, 0.10435095, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wa8ko"]
-emission_enabled = true
-emission = Color(1, 0.9529412, 0.6509804, 1)
-emission_energy_multiplier = 3.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1v6qk"]
 albedo_color = Color(1, 0.88235295, 0.1764706, 1)
@@ -551,6 +524,17 @@ border_width_bottom = 2
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1574070685]
 transform = Transform3D(-0.9845032, -0.14223363, 0.10258213, 0, 0.5849577, 0.8110638, -0.17536674, 0.79849494, -0.5758927, 0, 87.12132, 0)
 shadow_enabled = true
+
+[node name="DayNightCycle" type="Node3D" parent="." unique_id=1319159889 node_paths=PackedStringArray("sun_light", "moon_light", "world_environment")]
+script = ExtResource("1_1epgm")
+sun_light = NodePath("../DirectionalLight3D")
+moon_light = NodePath("../Moonlight")
+world_environment = NodePath("../WorldEnvironment")
+time_speed_multiplier = 60.0
+
+[node name="Moonlight" type="DirectionalLight3D" parent="." unique_id=2054907200]
+light_energy = 0.0
+sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=772568133]
 environment = SubResource("Environment_3kpib")
@@ -922,7 +906,7 @@ material = SubResource("StandardMaterial3D_lp3um")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.921711, 0)
 
 [node name="Water" type="CSGBox3D" parent="Ocean" unique_id=1387564939]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.295002, -0.5, -26.182125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.317707, -0.25095367, -26.464169)
 size = Vector3(780.735, 0.2, 774.5541)
 material = SubResource("ShaderMaterial_80cue")
 
@@ -932,140 +916,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.263123, 0, -61.86192)
 [node name="Lighthouse" type="Node3D" parent="SmallIsland" unique_id=931586613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 179.56644, 0, -164.31398)
 
-[node name="Tower" type="CSGCombiner3D" parent="SmallIsland/Lighthouse" unique_id=1375333735]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.756563, 0, 17.72936)
-use_collision = true
-
-[node name="OuterTower2" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower" unique_id=1449398571]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7357464, 27.978477, -17.963661)
-radius = 8.042969
-height = 4.588867
-sides = 32
-material = SubResource("StandardMaterial3D_o6xl0")
-
-[node name="InnerHole2" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=813298466]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1355, 0)
-operation = 2
-radius = 4.378418
-height = 3.8552132
-sides = 32
-material = SubResource("StandardMaterial3D_ids8r")
-
-[node name="InnerHole3" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=242938046]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.037410736, 0)
-operation = 2
-radius = 7.0966797
-height = 3.9302063
-sides = 32
-material = SubResource("StandardMaterial3D_dnhof")
-
-[node name="Window" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=145150592]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38452148, 0.29671478, 7.623108)
-operation = 2
-size = Vector3(1.769043, 2.4204254, 1.7954102)
-
-[node name="Window2" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=115650846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38452148, 0.29671478, -7.7531967)
-operation = 2
-size = Vector3(1.769043, 2.4204254, 1.7954102)
-
-[node name="Window3" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=1044920539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.523819, 0.29671478, 0.340271)
-operation = 2
-size = Vector3(1.7948303, 2.4204254, 1.7954102)
-
-[node name="Window4" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=206839374]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.503998, 0.29671478, 0.340271)
-operation = 2
-size = Vector3(1.4745178, 2.4204254, 1.7954102)
-
-[node name="Window5" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=1865599350]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -5.502136, 0.29671478, 4.994255)
-operation = 2
-size = Vector3(1.7568665, 2.4204254, 1.7954102)
-
-[node name="Window6" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=1379449538]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 5.5659637, 0.29671478, -5.3989487)
-operation = 2
-size = Vector3(1.7568665, 2.4204254, 1.7954102)
-
-[node name="Window7" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=338529979]
-transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 5.423645, 0.29671478, 5.412773)
-operation = 2
-size = Vector3(1.7568665, 2.4204254, 1.7954102)
-
-[node name="Window8" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower2" unique_id=1676886489]
-transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, -5.312668, 0.29671478, -5.311348)
-operation = 2
-size = Vector3(1.7568665, 2.4204254, 1.7954102)
-
-[node name="OuterTower" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower" unique_id=845203901]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7357464, 13.018483, -17.963661)
-use_collision = true
-radius = 5.0
-height = 25.889404
-sides = 32
-material = SubResource("StandardMaterial3D_tipki")
-
-[node name="InnerHole" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower/OuterTower" unique_id=1669563335]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4575567, 0)
-operation = 2
-radius = 4.378418
-height = 23.457718
-sides = 32
-material = SubResource("StandardMaterial3D_h626j")
-
-[node name="Door" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower/OuterTower" unique_id=99492142]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, -7.436035, 0.19999695)
-operation = 2
-size = Vector3(2.1000001, 3.6720705, 2.4)
-
-[node name="OuterTower3" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower" unique_id=550954295]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7357464, 32.47843, -17.963661)
-use_collision = true
-radius = 5.0
-height = 5.1180954
-sides = 32
-material = SubResource("StandardMaterial3D_85g3d")
-
-[node name="InnerHole" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower" unique_id=492276805]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7357464, 31.642782, -17.963661)
-operation = 2
-radius = 4.378418
-height = 7.7592545
-sides = 32
-material = SubResource("StandardMaterial3D_1x1jr")
-
-[node name="Stair1" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower" unique_id=847365061]
-transform = Transform3D(0.8186924, -0.5742323, 0, 0.5742323, 0.8186924, 0, 0, 0, 1, -0.78638506, 0.38567743, -17.747652)
-size = Vector3(6.6685486, 3.5368347, 2.511242)
-material = SubResource("StandardMaterial3D_choun")
-
-[node name="Stair2" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower" unique_id=114696322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4748664, 1.9029992, -17.750366)
-size = Vector3(1.0997314, 3.690332, 2.5134277)
-material = SubResource("StandardMaterial3D_ya4ey")
-
-[node name="Roof" type="CSGCylinder3D" parent="SmallIsland/Lighthouse/Tower" unique_id=509556151]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7357483, 37.809586, -17.963661)
-use_collision = true
-radius = 8.760742
-height = 5.8344383
-sides = 32
-cone = true
-material = SubResource("StandardMaterial3D_nijsm")
-
-[node name="Light" type="CSGBox3D" parent="SmallIsland/Lighthouse/Tower" unique_id=1506119123]
-transform = Transform3D(1.7029206, 0, -0.6764421, 0, 2.7335699, 0, 1.5640651, 0, 0.7364958, 3.3207703, 32.57384, -14.175781)
-material = SubResource("StandardMaterial3D_wa8ko")
-
-[node name="LightBeam" type="SpotLight3D" parent="SmallIsland/Lighthouse/Tower" unique_id=753571631]
-transform = Transform3D(-0.61566144, -0.33302778, 0.7141803, 0, 0.9063078, 0.42261827, -0.7880108, 0.2601898, -0.55797875, 2.6102295, 32.57384, -13.56385)
-light_color = Color(1, 0.9529412, 0.6509804, 1)
-light_energy = 20.0
-spot_range = 100.0
-spot_angle = 8.1551
-spot_angle_attenuation = 0.2
+[node name="lighthouse_tower" parent="SmallIsland/Lighthouse" unique_id=385691118 instance=ExtResource("16_152kg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03327632, -0.3329773)
 
 [node name="Platforms" type="Node3D" parent="SmallIsland/Lighthouse" unique_id=989415423]
 
@@ -1204,6 +1056,24 @@ shadow_blur = 2.0
 
 [node name="TreasureChest" parent="SmallIsland/Lighthouse" unique_id=935471989 instance=ExtResource("3_o6xl0")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 25.971243, -6.1449203)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SmallIsland/Lighthouse" unique_id=714269011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6967621, 31.748344, 0.6667328)
+light_color = Color(1, 0.6302477, 0.32086813, 1)
+light_energy = 11.5
+light_size = 1.0
+light_specular = 3.7
+omni_range = 9.103046
+omni_attenuation = 0.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SmallIsland/Lighthouse" unique_id=412387231]
+transform = Transform3D(-1, 0, -8.742278e-08, -4.909699e-08, 0.8274061, 0.5616041, 7.233414e-08, 0.5616041, -0.8274061, 0, 32.90509, 5.95755)
+light_color = Color(1, 0.6313726, 0.32156864, 1)
+light_energy = 25.0
+light_indirect_energy = 5.5
+light_specular = 5.0
+spot_range = 89.33015
+spot_angle = 9.395687
 
 [node name="Boundary" type="Node3D" parent="." unique_id=1475476180]
 
@@ -1669,3 +1539,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -136.09909)
 
 [node name="ocean_waves2" parent="ambient_sounds" unique_id=754593111 instance=ExtResource("62_e755i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -141.97083, 0, -96.231865)
+
+[node name="fire_vfx" parent="." unique_id=462665344 instance=ExtResource("65_xhfw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.004143, 5.5616765, 96.33716)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="fire_vfx" unique_id=1545362217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021121979, -0.070569515, 0)
+light_color = Color(1, 0.5411765, 0.19607843, 1)
+light_energy = 9.661
+light_indirect_energy = 3.0
+light_volumetric_fog_energy = 4.525
+light_size = 0.276
+shadow_enabled = true
+omni_range = 12.103
+omni_attenuation = 1.412
